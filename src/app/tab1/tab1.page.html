@@ -1,17 +1,75 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="pokedex">
     <ion-title>
-      Tab 1
+      POKÉDEX
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col >
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>#001</ion-card-subtitle>
+            <ion-card-title>Bulbasaur</ion-card-title>
+          </ion-card-header>
+          <img  src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png" alt="">
+          <ion-card-content  class="ion-justify-content-between">
+              <ion-badge color="grass">Grass</ion-badge>
+              <ion-badge color="poison">Poison</ion-badge>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col >
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>#004</ion-card-subtitle>
+            <ion-card-title>Charmander</ion-card-title>
+          </ion-card-header>
+          <img  src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="">
+          <ion-card-content>
+              <ion-badge color="fire">Fire</ion-badge>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center">
+      <ion-col >
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>#007</ion-card-subtitle>
+            <ion-card-title>Squirtle</ion-card-title>
+          </ion-card-header>
+          <img  src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="">
+          <ion-card-content>
+              <ion-badge color="water">Water</ion-badge>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>#025</ion-card-subtitle>
+            <ion-card-title>Pikachu</ion-card-title>
+          </ion-card-header>
+          <img  src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="">
+          <ion-card-content>
+              <ion-badge color="electric">Electric</ion-badge>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+
+
+
+  </ion-grid>
+
 </ion-content>
