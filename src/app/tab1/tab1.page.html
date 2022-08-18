@@ -7,22 +7,29 @@
 <ion-content [fullscreen]="true">
   <ion-grid>
     <ion-row class="ion-justify-content-center">
-      <ion-col *ngFor="let pokemon of listaPokemon">
-        <ion-card>
+      <ion-col *ngFor="let pokemon of listaPokemon" size="6">
+        <ion-card [color]="pokemon.types[0].type.name">
           <ion-card-header>
-            <ion-card-subtitle>#001</ion-card-subtitle>
+            <ion-card-subtitle>#{{pokemon.id}}</ion-card-subtitle>
             <ion-card-title>{{ pokemon.name | titlecase }} </ion-card-title>
           </ion-card-header>
           <img
-            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+            [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+pokemon.id.toString().padStart(3, '0') +' .png'"
             alt=""
           />
           <ion-card-content
             style="display: flex"
             class="ion-justify-content-between"
           >
-            <ion-badge color="grass">Grass</ion-badge>
-            <ion-badge color="poison">Poison</ion-badge>
+            <span class="ion-text-center">
+              <ion-badge
+                *ngFor="let type of pokemon.types"
+                [color]="type.type.name"
+                class="borda"
+              >
+                {{type.type.name}}</ion-badge
+              >
+            </span>
           </ion-card-content>
         </ion-card>
       </ion-col>
